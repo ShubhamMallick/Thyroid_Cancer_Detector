@@ -5,44 +5,67 @@ This project provides two interfaces for predicting thyroid cancer recurrence:
 - **Web App**: Built with Streamlit
 
 ## Features
-- Input form for patient data
-- Machine learning model for recurrence prediction
-- Preprocessing of categorical inputs
+- Input form for patient data with all required features
+- Data preprocessing to match model requirements
+- Prediction display with recurrence probability
+- Error handling for invalid inputs
 
 ## Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/ShubhamMallick/Thyroid_Cancer_Detector.git
    ```
-2. Create a virtual environment:
+2. Create and activate a virtual environment:
    ```bash
    python -m venv thyroid_env
+   source thyroid_env/bin/activate  # Linux/Mac
+   thyroid_env\Scripts\activate    # Windows
    ```
-3. Activate the environment:
-   - Windows: `thyroid_env\Scripts\activate`
-   - Unix: `source thyroid_env/bin/activate`
-4. Install dependencies:
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
 ## Usage
-- **Desktop App**:
-  ```bash
-  python app.py
-  ```
-- **Web App**:
-  ```bash
-  streamlit run web_app.py
-  ```
+### Desktop Application
+Run the desktop app:
+```bash
+python app.py
+```
+
+### Web Application
+Run the web app:
+```bash
+streamlit run web_app.py
+```
 
 ## Project Structure
 ```
-thyroid_cancer/
-├── app.py                # Desktop application
-├── web_app.py            # Web application
-├── thyroid_recurrence_model.pkl  # Trained model
-├── requirements.txt      # Dependencies
-├── README.md             # This file
-└── ...                   # Other project files
+Thyroid_Cancer_Detector/
+├── app.py                     # Desktop application (PyQt6)
+├── web_app.py                 # Web application (Streamlit)
+├── thyroid_recurrence_model.pkl  # Trained machine learning model
+├── requirements.txt           # Python dependencies
+├── README.md                  # Project documentation
+├── .gitignore                 # Specifies files to ignore in version control
+├── thyroid_icon.ico           # Application icon
+├── thyroid_icon_*.png         # Icon images in various sizes
+├── create_icon.py             # Script to create the icon
+└── train.ipynb                # Jupyter notebook for model training
 ```
+
+## Dependencies
+- Python 3.9+
+- scikit-learn
+- pandas
+- numpy
+- joblib
+- PyQt6
+- streamlit
+- Pillow
+
+## Contributing
+Contributions are welcome! Please fork the repository and create a pull request.
+
+## License
+[MIT](LICENSE)
